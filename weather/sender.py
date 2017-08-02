@@ -5,6 +5,7 @@ from email.header import Header
 from email.mime.text import MIMEText
 import smtplib
 from weather import WeeksWeather 
+import sys 
 
 class Sender(object):
     def __init__(self,from_addr,password,smtp_host='',port=''):
@@ -18,7 +19,9 @@ class Sender(object):
             self.port = 25
         
     def send(self,to_addrs=[]):
-        w = WeeksWeather('杭州')
+        if len(sys.argv)==1:
+            raise Exception("请输入城市名称额:")
+        w = WeeksWeather(sys.argv[1])
         weathers = w.down_weathers()
         s = ''
         for i in weathers:

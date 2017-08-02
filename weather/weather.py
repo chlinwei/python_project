@@ -51,13 +51,19 @@ class WeeksWeather(object):
             weather.win = wins[i].encode('utf-8')
             if i == 0:
                 weather.date = '今天'
+                u1 = time.strftime('%U') #今年的第几周
             elif i==1:
                 weather.date = '明天'
             else:
                 str = time.strftime("%w",time.localtime(time.time()+i*86400))
+                u2 = time.strftime('%U',time.localtime(time.time() + i*86400))
                 if str == '0':
                     str ='天'
-                weather.date = '星期' +  str
+                    weather.date = '星期' +  str
+                elif int(u2)>int(u1):
+                    weather.date = '下个星期' +  str
+                else:
+                    weather.date = '星期' +  str
             Weathers.append(weather)
         return Weathers
 
@@ -69,6 +75,4 @@ if __name__=='__main__':
         print i
     print w.URL
     print len(l)
-
-
 

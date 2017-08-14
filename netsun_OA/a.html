@@ -1,0 +1,561 @@
+<html>
+<head>
+<title>Netsun - 员工自动化办公系统</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--<meta http-equiv="Pragma" CONTENT="no-cache">-->
+<link href="/prog/css/web.css" rel="stylesheet" type="text/css">
+<link href="/prog/css/1.css" rel="stylesheet" type="text/css">
+<script src="/prog/js/common.js" type="text/javascript" language="JavaScript"></script>
+<script src="/prog/js//jquery-1.10.2.min.js"></script>
+<style type="text/css">
+<!--
+.STYLE1 {font-size: 12px}
+-->
+</style>
+<SCRIPT language=javascript>
+<!--
+function menu_display(t_id,i_id){//显示隐藏程序
+  var t_id;//表格ID
+  var i_id;//图片ID
+  var on_img="images/button_03.gif";//打开时图片
+  var off_img="images/button_01.gif";//隐藏时图片
+  if (t_id.style.display == "none") {//如果为隐藏状态
+    t_id.style.display="";//切换为显示状态
+    i_id.src=on_img;//换图
+  }else{//否则
+    t_id.style.display="none";//切换为隐藏状态
+    i_id.src=off_img;
+  }//换图
+}
+
+function showhide(t_id,i_id){//显示隐藏程序
+  var t_id;//表格ID
+  var i_id;//图片ID
+  var on_img="images/button_02.gif";//打开时图片
+  var off_img="images/button_01.gif";//隐藏时图片
+  if (t_id.style.display == "none") {//如果为隐藏状态
+    t_id.style.display="";//切换为显示状态
+    i_id.src=on_img;//换图
+  }else{//否则
+    t_id.style.display="none";//切换为隐藏状态
+    i_id.src=off_img;
+  }//换图
+
+}
+-->
+</SCRIPT>
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<table id="__01" width="1003" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td colspan="2">
+			<img src="/prog/images/zj_01.jpg" width="1003" height="73" alt=""></td>
+	</tr>
+	<tr>
+	<td height="30" colspan="2" background="/prog/images/zj_02.jpg" align=left>
+	<table width="98%" border="0" align=left>
+          <tr>
+            <td width="2%" align=right valign=middle>&nbsp;<img src="/prog/images/icon.jpg" width="16" height="16"></td>
+            <td width="87%" valign="middle"><span class="white2">欢迎 [<span class="bu02f">130296，林威</span>]&nbsp;&nbsp;登录</span></td>
+            <td width="10%" align=right valign="middle" class="white2"><a href="/prog/logout.cgi" class="white2"><font color="#ffffff">[退出]</font></a></td>
+          </tr>
+        </table>
+        </td>
+	</tr>
+	<tr>
+	<td height="27" colspan="2" background="/prog/images/zj_03.jpg">
+	  <table width="50%" border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+            <td align="left" class="bu01f" cellpadding="2" cellspacing="1"><img id="img100" src="images/button_03.gif" align="absmiddle">&nbsp;<a href="/x/all_information/netsun_news/list_news" class="bu02f">虚拟办公室首页</a></td>
+ 	  </tr>
+          </table>
+        </td>
+	</tr>
+
+
+<tr>
+<!--菜单-->
+<td width="186" class="bubg" valign=top>
+<table width="186" border="0" cellspacing="0" cellpadding="0">
+<!--
+  <tr>
+    <td background="/prog/images/menu.jpg"  width="185" height="29">test</td>
+  </tr>
+-->
+
+
+        <tr>
+            <td align="left" class="bu01" onClick="menu_display(table16,img16)" cellpadding="2" cellspacing="1"><img id="img16" src="/prog/images/button_01.gif" align="absmiddle">&nbsp;<a href="javascript:;"  class="bu02">公司动态</a></td>
+        </tr>
+        
+        <tbody id="table16" style="display:none">
+           
+           <tr>
+            <td class="bu06line" style="font-size: 1px;">&nbsp;</td>
+        </tr>	
+       
+        	 
+          <tr>
+            <td align="left" class="bu06" id="minfo_16111"><img src="/prog/images/button_02.gif" align="absmiddle" id="minfo_16114">&nbsp;&nbsp;<a href="/x/all_information/netsun_news/list_news"  class="bu02" id="minfo_16112">今日网盛</a> <img src="images/spacer.gif" width="9" height="7" align="absmiddle" id="minfo_16113"></td>
+          </tr>
+        	 
+          <tr>
+            <td align="left" class="bu06" id="minfo_16121"><img src="/prog/images/button_02.gif" align="absmiddle" id="minfo_16124">&nbsp;&nbsp;<a href="/x/all_information/netsun_files/list_files"  class="bu02" id="minfo_16122">公司文件</a> <img src="images/spacer.gif" width="9" height="7" align="absmiddle" id="minfo_16123"></td>
+          </tr>
+        	 
+          <tr>
+            <td align="left" class="bu06" id="minfo_16131"><img src="/prog/images/button_02.gif" align="absmiddle" id="minfo_16134">&nbsp;&nbsp;<a href="/x/all_information/netsun_notice/list_notice"  class="bu02" id="minfo_16132">公司通知</a> <img src="images/spacer.gif" width="9" height="7" align="absmiddle" id="minfo_16133"></td>
+          </tr>
+        	 
+          <tr>
+            <td align="left" class="bu06" id="minfo_16151"><img src="/prog/images/button_02.gif" align="absmiddle" id="minfo_16154">&nbsp;&nbsp;<a href="/x/all_information/netsun_criticism/list_criticism"  class="bu02" id="minfo_16152">广告位信息</a> <img src="images/spacer.gif" width="9" height="7" align="absmiddle" id="minfo_16153"></td>
+          </tr>
+        	 
+          <tr>
+            <td align="left" class="bu06" id="minfo_16141"><img src="/prog/images/button_02.gif" align="absmiddle" id="minfo_16144">&nbsp;&nbsp;<a href="/x/all_information/market_field/list_field"  class="bu02" id="minfo_16142">市场园地</a> <img src="images/spacer.gif" width="9" height="7" align="absmiddle" id="minfo_16143"></td>
+          </tr>
+                     
+	        	  
+	<tr>
+            <td height="1" bgcolor="#A5B7DC"></td>
+        </tr>
+        
+        </tbody>
+
+
+        <tr>
+            <td align="left" class="bu01" onClick="menu_display(table10,img10)" cellpadding="2" cellspacing="1"><img id="img10" src="/prog/images/button_01.gif" align="absmiddle">&nbsp;<a href="javascript:;"  class="bu02">个人管理</a></td>
+        </tr>
+        
+        <tbody id="table10" style="display:none">
+           
+           <tr>
+            <td class="bu06line" style="font-size: 1px;">&nbsp;</td>
+        </tr>	
+       
+        	 
+          <tr>
+            <td align="left" class="bu06" id="minfo_10111"><img src="/prog/images/button_02.gif" align="absmiddle" id="minfo_10114">&nbsp;&nbsp;<a href="/prog/Action.cgi?t=minfo_mod"  class="bu02" id="minfo_10112">个人资料</a> <img src="images/spacer.gif" width="9" height="7" align="absmiddle" id="minfo_10113"></td>
+          </tr>
+        	 
+          <tr>
+            <td align="left" class="bu06" id="minfo_10121"><img src="/prog/images/button_02.gif" align="absmiddle" id="minfo_10124">&nbsp;&nbsp;<a href="/prog/Action.cgi?t=minfo_mod&f=mod_pass"  class="bu02" id="minfo_10122">修改密码</a> <img src="images/spacer.gif" width="9" height="7" align="absmiddle" id="minfo_10123"></td>
+          </tr>
+        	 
+          <tr>
+            <td align="left" class="bu06" id="minfo_10171"><img src="/prog/images/button_02.gif" align="absmiddle" id="minfo_10174">&nbsp;&nbsp;<a href="/prog/Action.cgi?t=my_wage"  class="bu02" id="minfo_10172">个人工资</a> <img src="images/spacer.gif" width="9" height="7" align="absmiddle" id="minfo_10173"></td>
+          </tr>
+        	 
+          <tr>
+            <td align="left" class="bu06" id="minfo_10141"><img src="/prog/images/button_02.gif" align="absmiddle" id="minfo_10144">&nbsp;&nbsp;<a href="/prog/Action.cgi?t=minfo_leave&f=clist"  class="bu02" id="minfo_10142">请假管理</a> <img src="images/spacer.gif" width="9" height="7" align="absmiddle" id="minfo_10143"></td>
+          </tr>
+        	 
+          <tr>
+            <td align="left" class="bu06" id="minfo_10181"><img src="/prog/images/button_02.gif" align="absmiddle" id="minfo_10184">&nbsp;&nbsp;<a href="/prog/Action.cgi?t=minfo_summary&f=clist"  class="bu02" id="minfo_10182">工作总结</a> <img src="images/spacer.gif" width="9" height="7" align="absmiddle" id="minfo_10183"></td>
+          </tr>
+        	 
+          <tr>
+            <td align="left" class="bu06" id="minfo_10151"><img src="/prog/images/button_02.gif" align="absmiddle" id="minfo_10154">&nbsp;&nbsp;<a href="/prog/Action.cgi?t=minfo_trip&f=clist"  class="bu02" id="minfo_10152">出差管理</a> <img src="images/spacer.gif" width="9" height="7" align="absmiddle" id="minfo_10153"></td>
+          </tr>
+        	 
+          <tr>
+            <td align="left" class="bu06" id="minfo_10161"><img src="/prog/images/button_02.gif" align="absmiddle" id="minfo_10164">&nbsp;&nbsp;<a href="/prog/Action.cgi?t=minfo_tel&f=clist"  class="bu02" id="minfo_10162">电话管理</a> <img src="images/spacer.gif" width="9" height="7" align="absmiddle" id="minfo_10163"></td>
+          </tr>
+        	 
+          <tr>
+            <td align="left" class="bu06" id="minfo_10131"><img src="/prog/images/button_02.gif" align="absmiddle" id="minfo_10134">&nbsp;&nbsp;<a href="/prog/Action.cgi?t=minfo_toocle&f=edit"  class="bu02" id="minfo_10132">绑定电话</a> <img src="images/spacer.gif" width="9" height="7" align="absmiddle" id="minfo_10133"></td>
+          </tr>
+                     
+	        	  
+	<tr>
+            <td height="1" bgcolor="#A5B7DC"></td>
+        </tr>
+        
+        </tbody>
+
+
+<!--帮助中心start-->
+  <tr>
+    <td align="left" class="bu01" cellpadding="2" cellspacing="1"><img src="images/button_03.gif" align="absmiddle">&nbsp;<a href="help/index.html" target="_blank" class="bu02">帮助中心</a></td>
+  </tr>		
+  
+    <tr>
+            <td align="left" class="bu01" cellpadding="2" cellspacing="1"><img src="images/button_03.gif" align="absmiddle">&nbsp;<a href="help/book.html" target="_blank" class="bu02">员工手册</a></td>
+      </tr>				
+<!--帮助中心end-->
+
+<!--
+  <tr>
+    <td><img src="/prog/images/menu.jpg" width="185" height="29"></td>
+  </tr>
+  <tr>
+    <td><img src="/prog/images/menu2.jpg" width="185" height="107"></td>
+  </tr>
+-->
+</table>
+<br><br><br><br>
+</td>
+
+<!--功能实现-->
+<td width="824" background="/prog/images/zj_05.jpg" valign=top>
+	<table width="100%" height="232" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td colspan="3" class="unnamed1" height="232" valign=top><script language='JavaScript' src='/prog/js/common.js'></script>
+<script language='JavaScript' src='/prog/js/calendar.js'></script>
+<script language="javascript">
+<!--
+function toSelect(selid,tvalue)
+{
+   var tpos = document.getElementById(selid).options
+   for(var po=0 ; po<tpos.length;po++)
+   {
+     if(tvalue == tpos[po].value)
+     tpos[po].selected=true;
+   }
+}
+
+-->
+</script> 
+<table width="99%" border="0" align="center" cellpadding="0" cellspacing="0">
+<form name=mform action="" method=post>
+    <tr>
+      <td width="100%" align="right" bgcolor="#f7f7f7">
+      <input type="hidden"  name="t"   value="my_wage">           
+        <input type="hidden"  name="f"   value="clist">            
+	    <select name="years" size="1" id="id_years">
+                <option value="">选择年份</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+       </select>  
+       <select name="months" size="1" id="id_months">
+                <option value="">选择月份</option>
+                <option value="01">1月</option>
+                <option value="02">2月</option>
+                <option value="03">3月</option>
+                <option value="04">4月</option>
+                <option value="05">5月</option>
+                <option value="06">6月</option>
+                <option value="07">7月</option>
+                <option value="08">8月</option>
+                <option value="09">9月</option>
+                <option value="10">10月</option>
+                <option value="11">11月</option>
+                <option value="12">12月</option>
+
+        </select>
+        <script language=javascript>       
+			  toSelect("id_years","");
+		      toSelect("id_months","");
+        </script>        	 
+      <input type=submit   value="搜索">
+
+      </td>
+    </tr>
+</form>
+</table>
+<table width="99%" border="0" align="center" cellpadding="0" cellspacing="0" >
+<tr>
+<td class="t13">
+</td>
+</tr>
+</table>
+<hr width="99%" size="1" noshade="noshade" color="#cccccc" />
+
+<table width="99%" border="0px" bgcolor="#BECDDB" align="center" cellpadding="3" cellspacing="1">
+
+<tr  bgcolor="#1F60AE" style="color:#FFFFFF;">
+<td align="center" rowspan=2>员工</td>
+<td align="center" colspan=6>工资内容</td>
+<td align="center" rowspan=2>应发<br>工资</td>
+<td align="center" colspan=6>各类扣款</td>
+<td align="center" rowspan=2>实发<br>工资</td>
+<td align="center" rowspan=2>部门<br>审核</td>
+<td align="center" rowspan=2>财务<br>审核</td>
+<td align="center" rowspan=2>月份</td>
+
+<tr bgcolor="#1F60AE" style="color:#FFFFFF;"><td align="center" >基本<br>工资</td>
+<td align="center" >其他</td>
+<td align="center" >岗位<br>工资</td>
+<td align="center" >通讯费</td>
+<td align="center" >加班及<br>奖罚</td>
+<td align="center" >应增减<br>工资</td>
+<td align="center" >代扣<br>个所税</td>
+<td align="center" >养老<br>保险</td>
+<td align="center" >大病<br>保险</td>
+<td align="center" >门诊<br>统筹</td>
+<td align="center" >住房<br>公积金</td>
+<td align="center" >其他项</td>
+</tr>
+</tr>
+
+  	<tr bgcolor="#FFFFFF">
+  	<td align="center">林威</td>
+
+	<td align="right">3200.00</td>
+	<td align="right">0.00</td>
+  	<td align="right">800.00</td>
+    <td align="right">300.00</td>
+	<td align="right"><a  href="javascript:showSubadd('deduct107998',true,'test',null,'/prog/Action.cgi?t=my_wage&f=sub_view_deduct&employee_id=1789222&month_date=201706&p=com')" title="点击查看本月个人提成信息"><img id="deduct107998" align=absmiddle width=16 height=16 src="images/button_01.gif" border=0></a>80.00</td>
+	<td align="right"><a  href="javascript:showSubadd('attendance107998',true,'test',null,'/prog/Action.cgi?t=my_wage&f=sub_view_attendance&employee_id=1789222&month_date=201706&p=com')" title="点击查看本月个人考勤信息"><img id="attendance107998" align=absmiddle width=16 height=16 src="images/button_01.gif" border=0></a>0.00</td>
+	<td align="right">4380.00</td>
+	<td align="right">11.07</td>
+	<td align="right">206.88</td>
+	<td align="right">4.00</td>
+	<td align="right">51.72</td>
+	<td align="right">0.00</td>
+	<td align="right">0.00</td>
+	<td align="right">4106.33</td>
+	<td align="right"><font color="red">已通过</font></td>
+	<td align="right"><font color="red">已通过</font></td>				
+	<td align="center">201706</td>
+  </tr>
+
+  	<tr bgcolor="#FFFFFF">
+  	<td align="center">林威</td>
+
+	<td align="right">3200.00</td>
+	<td align="right">0.00</td>
+  	<td align="right">800.00</td>
+    <td align="right">300.00</td>
+	<td align="right"><a  href="javascript:showSubadd('deduct107288',true,'test',null,'/prog/Action.cgi?t=my_wage&f=sub_view_deduct&employee_id=1789222&month_date=201705&p=com')" title="点击查看本月个人提成信息"><img id="deduct107288" align=absmiddle width=16 height=16 src="images/button_01.gif" border=0></a>0.00</td>
+	<td align="right"><a  href="javascript:showSubadd('attendance107288',true,'test',null,'/prog/Action.cgi?t=my_wage&f=sub_view_attendance&employee_id=1789222&month_date=201705&p=com')" title="点击查看本月个人考勤信息"><img id="attendance107288" align=absmiddle width=16 height=16 src="images/button_01.gif" border=0></a>0.00</td>
+	<td align="right">4300.00</td>
+	<td align="right">8.67</td>
+	<td align="right">206.88</td>
+	<td align="right">4.00</td>
+	<td align="right">51.72</td>
+	<td align="right">0.00</td>
+	<td align="right">0.00</td>
+	<td align="right">4028.73</td>
+	<td align="right"><font color="red">已通过</font></td>
+	<td align="right"><font color="red">已通过</font></td>				
+	<td align="center">201705</td>
+  </tr>
+
+  	<tr bgcolor="#FFFFFF">
+  	<td align="center">林威</td>
+
+	<td align="right">2700.00</td>
+	<td align="right">0.00</td>
+  	<td align="right">800.00</td>
+    <td align="right">300.00</td>
+	<td align="right"><a  href="javascript:showSubadd('deduct106147',true,'test',null,'/prog/Action.cgi?t=my_wage&f=sub_view_deduct&employee_id=1789222&month_date=201704&p=com')" title="点击查看本月个人提成信息"><img id="deduct106147" align=absmiddle width=16 height=16 src="images/button_01.gif" border=0></a>0.00</td>
+	<td align="right"><a  href="javascript:showSubadd('attendance106147',true,'test',null,'/prog/Action.cgi?t=my_wage&f=sub_view_attendance&employee_id=1789222&month_date=201704&p=com')" title="点击查看本月个人考勤信息"><img id="attendance106147" align=absmiddle width=16 height=16 src="images/button_01.gif" border=0></a>0.00</td>
+	<td align="right">3800.00</td>
+	<td align="right">0.00</td>
+	<td align="right">206.88</td>
+	<td align="right">4.00</td>
+	<td align="right">51.72</td>
+	<td align="right">0.00</td>
+	<td align="right">0.00</td>
+	<td align="right">3537.40</td>
+	<td align="right"><font color="red">已通过</font></td>
+	<td align="right"><font color="red">已通过</font></td>				
+	<td align="center">201704</td>
+  </tr>
+
+  	<tr bgcolor="#FFFFFF">
+  	<td align="center">林威</td>
+
+	<td align="right">2700.00</td>
+	<td align="right">0.00</td>
+  	<td align="right">800.00</td>
+    <td align="right">300.00</td>
+	<td align="right"><a  href="javascript:showSubadd('deduct105246',true,'test',null,'/prog/Action.cgi?t=my_wage&f=sub_view_deduct&employee_id=1789222&month_date=201703&p=com')" title="点击查看本月个人提成信息"><img id="deduct105246" align=absmiddle width=16 height=16 src="images/button_01.gif" border=0></a>80.00</td>
+	<td align="right"><a  href="javascript:showSubadd('attendance105246',true,'test',null,'/prog/Action.cgi?t=my_wage&f=sub_view_attendance&employee_id=1789222&month_date=201703&p=com')" title="点击查看本月个人考勤信息"><img id="attendance105246" align=absmiddle width=16 height=16 src="images/button_01.gif" border=0></a>0.00</td>
+	<td align="right">3880.00</td>
+	<td align="right">0.00</td>
+	<td align="right">206.88</td>
+	<td align="right">4.00</td>
+	<td align="right">51.72</td>
+	<td align="right">0.00</td>
+	<td align="right">0.00</td>
+	<td align="right">3617.40</td>
+	<td align="right"><font color="red">已通过</font></td>
+	<td align="right"><font color="red">已通过</font></td>				
+	<td align="center">201703</td>
+  </tr>
+
+  	<tr bgcolor="#FFFFFF">
+  	<td align="center">林威</td>
+
+	<td align="right">2700.00</td>
+	<td align="right">0.00</td>
+  	<td align="right">800.00</td>
+    <td align="right">300.00</td>
+	<td align="right"><a  href="javascript:showSubadd('deduct104298',true,'test',null,'/prog/Action.cgi?t=my_wage&f=sub_view_deduct&employee_id=1789222&month_date=201702&p=com')" title="点击查看本月个人提成信息"><img id="deduct104298" align=absmiddle width=16 height=16 src="images/button_01.gif" border=0></a>0.00</td>
+	<td align="right"><a  href="javascript:showSubadd('attendance104298',true,'test',null,'/prog/Action.cgi?t=my_wage&f=sub_view_attendance&employee_id=1789222&month_date=201702&p=com')" title="点击查看本月个人考勤信息"><img id="attendance104298" align=absmiddle width=16 height=16 src="images/button_01.gif" border=0></a>0.00</td>
+	<td align="right">3800.00</td>
+	<td align="right">0.00</td>
+	<td align="right">206.88</td>
+	<td align="right">4.00</td>
+	<td align="right">51.72</td>
+	<td align="right">0.00</td>
+	<td align="right">0.00</td>
+	<td align="right">3537.40</td>
+	<td align="right"><font color="red">已通过</font></td>
+	<td align="right"><font color="red">已通过</font></td>				
+	<td align="center">201702</td>
+  </tr>
+
+  	<tr bgcolor="#FFFFFF">
+  	<td align="center">林威</td>
+
+	<td align="right">2700.00</td>
+	<td align="right">0.00</td>
+  	<td align="right">800.00</td>
+    <td align="right">300.00</td>
+	<td align="right"><a  href="javascript:showSubadd('deduct103374',true,'test',null,'/prog/Action.cgi?t=my_wage&f=sub_view_deduct&employee_id=1789222&month_date=201701&p=com')" title="点击查看本月个人提成信息"><img id="deduct103374" align=absmiddle width=16 height=16 src="images/button_01.gif" border=0></a>0.00</td>
+	<td align="right"><a  href="javascript:showSubadd('attendance103374',true,'test',null,'/prog/Action.cgi?t=my_wage&f=sub_view_attendance&employee_id=1789222&month_date=201701&p=com')" title="点击查看本月个人考勤信息"><img id="attendance103374" align=absmiddle width=16 height=16 src="images/button_01.gif" border=0></a>0.00</td>
+	<td align="right">3800.00</td>
+	<td align="right">0.00</td>
+	<td align="right">206.88</td>
+	<td align="right">4.00</td>
+	<td align="right">51.72</td>
+	<td align="right">0.00</td>
+	<td align="right">0.00</td>
+	<td align="right">3537.40</td>
+	<td align="right"><font color="red">已通过</font></td>
+	<td align="right"><font color="red">已通过</font></td>				
+	<td align="center">201701</td>
+  </tr>
+
+  	<tr bgcolor="#FFFFFF">
+  	<td align="center">林威</td>
+
+	<td align="right">2700.00</td>
+	<td align="right">0.00</td>
+  	<td align="right">800.00</td>
+    <td align="right">300.00</td>
+	<td align="right"><a  href="javascript:showSubadd('deduct102427',true,'test',null,'/prog/Action.cgi?t=my_wage&f=sub_view_deduct&employee_id=1789222&month_date=201612&p=com')" title="点击查看本月个人提成信息"><img id="deduct102427" align=absmiddle width=16 height=16 src="images/button_01.gif" border=0></a>0.00</td>
+	<td align="right"><a  href="javascript:showSubadd('attendance102427',true,'test',null,'/prog/Action.cgi?t=my_wage&f=sub_view_attendance&employee_id=1789222&month_date=201612&p=com')" title="点击查看本月个人考勤信息"><img id="attendance102427" align=absmiddle width=16 height=16 src="images/button_01.gif" border=0></a>0.00</td>
+	<td align="right">3800.00</td>
+	<td align="right">0.00</td>
+	<td align="right">0.00</td>
+	<td align="right">0.00</td>
+	<td align="right">0.00</td>
+	<td align="right">0.00</td>
+	<td align="right">0.00</td>
+	<td align="right">3800.00</td>
+	<td align="right"><font color="red">已通过</font></td>
+	<td align="right"><font color="red">已通过</font></td>				
+	<td align="center">201612</td>
+  </tr>
+
+  	<tr bgcolor="#FFFFFF">
+  	<td align="center">林威</td>
+
+	<td align="right">2700.00</td>
+	<td align="right">0.00</td>
+  	<td align="right">0.00</td>
+    <td align="right">300.00</td>
+	<td align="right"><a  href="javascript:showSubadd('deduct101524',true,'test',null,'/prog/Action.cgi?t=my_wage&f=sub_view_deduct&employee_id=1789222&month_date=201611&p=com')" title="点击查看本月个人提成信息"><img id="deduct101524" align=absmiddle width=16 height=16 src="images/button_01.gif" border=0></a>0.00</td>
+	<td align="right"><a  href="javascript:showSubadd('attendance101524',true,'test',null,'/prog/Action.cgi?t=my_wage&f=sub_view_attendance&employee_id=1789222&month_date=201611&p=com')" title="点击查看本月个人考勤信息"><img id="attendance101524" align=absmiddle width=16 height=16 src="images/button_01.gif" border=0></a>0.00</td>
+	<td align="right">3000.00</td>
+	<td align="right">0.00</td>
+	<td align="right">0.00</td>
+	<td align="right">0.00</td>
+	<td align="right">0.00</td>
+	<td align="right">0.00</td>
+	<td align="right">0.00</td>
+	<td align="right">3000.00</td>
+	<td align="right"><font color="red">已通过</font></td>
+	<td align="right"><font color="red">已通过</font></td>				
+	<td align="center">201611</td>
+  </tr>
+
+  	<tr bgcolor="#FFFFFF">
+  	<td align="center">林威</td>
+
+	<td align="right">2700.00</td>
+	<td align="right">0.00</td>
+  	<td align="right">0.00</td>
+    <td align="right">300.00</td>
+	<td align="right"><a  href="javascript:showSubadd('deduct100537',true,'test',null,'/prog/Action.cgi?t=my_wage&f=sub_view_deduct&employee_id=1789222&month_date=201610&p=com')" title="点击查看本月个人提成信息"><img id="deduct100537" align=absmiddle width=16 height=16 src="images/button_01.gif" border=0></a>0.00</td>
+	<td align="right"><a  href="javascript:showSubadd('attendance100537',true,'test',null,'/prog/Action.cgi?t=my_wage&f=sub_view_attendance&employee_id=1789222&month_date=201610&p=com')" title="点击查看本月个人考勤信息"><img id="attendance100537" align=absmiddle width=16 height=16 src="images/button_01.gif" border=0></a>0.00</td>
+	<td align="right">3000.00</td>
+	<td align="right">0.00</td>
+	<td align="right">0.00</td>
+	<td align="right">0.00</td>
+	<td align="right">0.00</td>
+	<td align="right">0.00</td>
+	<td align="right">0.00</td>
+	<td align="right">3000.00</td>
+	<td align="right"><font color="red">已通过</font></td>
+	<td align="right"><font color="red">已通过</font></td>				
+	<td align="center">201610</td>
+  </tr>
+
+</table>
+<table width="99%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+     <td height="20" align="center" bgcolor="#f9f9f9">
+    	<span class="black">应发工资合计：<font color="#FF0000">33600.00</font>元。</span>
+    	&nbsp;&nbsp;<span class="black">实发工资合计：<font color="#FF0000">32004.66</font>元，</span>
+    	&nbsp;&nbsp;<span class="black">个人所得税合计：<font color="#FF0000">19.74</font>元，</span>
+    	&nbsp;&nbsp;<span class="black">养老保险成合计：<font color="#FF0000">1241.28</font>元，</span>
+    	<br>&nbsp;&nbsp;<span class="black">大病保险合计：<font color="#FF0000">24.00</font>元。</span>
+    	&nbsp;&nbsp;<span class="black">门诊统筹合计：<font color="#FF0000">310.32</font>元，</span>
+    	&nbsp;&nbsp;<span class="black">公积金合计：<font color="#FF0000">0.00</font>元</span>
+		&nbsp;&nbsp;<span class="black">其他项合计：<font color="#FF0000">0.00</font>元</span>
+    </td>
+  </tr>
+</table>
+<br>
+
+<table width="99%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="20" align="center" bgcolor="#f9f9f9"><span class="black">共有<font color="#FF0000">9</font>条记录,<font color="#FF0000">1</font>页,显示<font color="#FF0000">1</font>--<font color="#FF0000">9 </font>  <b>1</b>  <select name="jump" size="1" id="jump"><option value="1">第1页</option></select><input id="jump_uri" type="hidden" value="/prog/Action.cgi?t=my_wage&poster=130296"><script language="javascript">$("#jump").val(1);$("#jump").change( function() {location.href = $("#jump_uri").val() + "&p=" + this.value;}); </script>
+ </span></td>
+  </tr>
+</table>
+<iframe id=AddFrame name=AddFrame frameborder=0 src="/prog/js/loading.htm" style="width:500px;height:385px;display:none;position:absolute;z-index:100"></iframe></td></tr></table>
+	</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<img src="/prog/images/zj_06.jpg" alt="" width="1003" height="53" border="0" usemap="#Map"></td>
+	</tr>
+	<tr>
+		<td colspan="2" background="/prog/images/zj_07.jpg" height="25">
+			<font color="#aaaaaa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;管理员邮箱  :  byn@netsun.com&nbsp;&nbsp;电话:  0571-88228463</font>
+	<div style="text-align:right;color:#aaaaaa"></div>
+			<!--<img src="/prog/images/zj_07.jpg" width="1003" height="26" alt="">--></td>
+	</tr>
+	<tr>
+		<td height="51" colspan="2" background="/prog/images/zj_08.jpg"><div align="center"><A href="http://corp.netsun.com/" title="关于网盛科技" class="gray2">&copy;2007
+        网盛生意宝 版权所有</A>&nbsp;<A href="http://www.netsun.com/popup/icp.html" target="_top" class="gray2">浙ICP证</A></div></td>
+	</tr>
+</table>
+
+<map name="Map"><area shape="rect" coords="450,6,548,48" href="http://china.chemnet.com/">
+<area shape="rect" coords="557,3,657,47" href="http://www.texnet.com.cn/">
+<area shape="rect" coords="666,1,769,48" href="http://www.pharmnet.com.cn/">
+<area shape="rect" coords="782,6,877,48" href="http://www.chemnet.com/">
+<area shape="rect" coords="883,6,983,49" href="http://www.netsun.com/">
+</map>
+
+
+<script language="JavaScript">   
+  menu_display(table10,img10); 
+    
+   
+   minfo_10171.className="bu06f"; 
+   minfo_10172.className="bu02";
+   minfo_10173.src ="images/tex_51.gif";
+   minfo_10174.src ="images/button_02.gif";
+</script> 
+
+
+</BODY>
+</HTML>
